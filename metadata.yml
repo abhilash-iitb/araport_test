@@ -3,7 +3,30 @@
 ---
 name: my_adapter
 version: 0.1
-type: generic
+type: passthrough
 main_module: main.py
-url: http://example.com
+url: http://ionomicshub.org/arabidopsis/ajax/DataSearchJson.action
 description: 'A test adapter'
+endpoints:
+    /access:
+        get:
+            summary: Return a JSON response
+            description: Fetch data in JSON format
+            parameters:
+                - name: ATGNum
+                  description: ATGNum
+                  type: string
+                  format: string
+                  required: true
+                - name: Skip
+                  description: Skip
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 0
+                - name: Limit
+                  description: Limit
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 10
