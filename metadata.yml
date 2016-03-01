@@ -5,10 +5,10 @@ name: my_adapter
 version: 0.1
 type: passthrough
 main_module: main.py
-url: http://ionomicshub.org/arabidopsis/ajax/DataSearchJson.action
+url: http://ionomicshub.org/arabidopsis/ajax
 description: 'A test adapter'
 endpoints:
-    /access:
+    /access/DataSearchJson.action:
         get:
             summary: Return a JSON response
             description: Fetch data in JSON format
