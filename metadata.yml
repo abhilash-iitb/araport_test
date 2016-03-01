@@ -3,7 +3,7 @@
 ---
 name: my_adapter
 version: 0.1
-type: query
+type: generic
 main_module: main.py
 url: http://example.com
 description: 'A test adapter'
