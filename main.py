@@ -8,7 +8,8 @@ def search(args):
 	payload  = {'ATGNum': args['atgnum'], 'Skip': args['skip'], 'Limit': args['limit']}
 	response = requests.get(url, params=payload)
 	#print response.json()
-	print response.text
+	#print json.dumps(response.text)
+	return 'application/json', json.dumps(response.text)
     #print json.dumps({'obj': 1, 'args': args})
     #print "---"
     #print json.dumps({'obj': 2, 'args': args})
