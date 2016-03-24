@@ -5,10 +5,10 @@ name: atg_number_search
 version: 0.1
 type: passthrough
 main_module: main.py
-url: http://ionomicshub.org/arabidopsis/ajax
+url: http://ionomicshub.org/arabidopsis/ajax/DataSearchJson.action
 description: 'Returns a JSON response of all information contained in trays for which the ATG number matches'
 endpoints:
-    /access/DataSearchJson.action:
+    /access:
         get:
             summary: Returns a JSON response for matched ATG number
             description: Returns a JSON response of all information contained in trays specified by skip and limit for which the ATG number matches
